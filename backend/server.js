@@ -50,7 +50,7 @@ app.use('/api/dashboard', dashboardRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'OK', message: 'VibeCode Finance API is running' });
+    res.json({ status: 'OK', message: 'Finote API is running' });
 });
 
 // Global error handler
