@@ -2683,6 +2683,8 @@ html {
     outline-offset: 2px;
 }
 
+
+/*
 @media (prefers-color-scheme: dark) {
     .navbar {
         background: rgba(30, 41, 59, 0.95);
@@ -2714,3 +2716,4 @@ html {
         color: black;
     }
 }
+*/

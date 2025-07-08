@@ -34,7 +34,7 @@ app.use('/api/dashboard', dashboardRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'OK', message: 'API is running' });
+    res.json({ status: 'OK', message: 'VibeCode Finance API is running' });
 });
 
 // Error handling middleware
@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/finance')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/vibecode-finance')
     .then(() => console.log('✅ Connected to MongoDB'))
     .catch((err) => console.error('❌ MongoDB connection error:', err));
 
