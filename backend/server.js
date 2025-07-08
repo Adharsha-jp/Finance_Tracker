@@ -23,23 +23,7 @@ const PORT = process.env.PORT || 5000;
 console.log("Mongo URI:", process.env.MONGODB_URI);
 
 // Middleware
-const allowedOrigins = [
-    'http://localhost:5173', // local dev
-    'https://finance-tracker-five-virid.vercel.app' // your deployed frontend
-];
-
-app.use(cors({
-    origin: function(origin, callback) {
-        // allow requests with no origin (like mobile apps or curl)
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('CORS not allowed from this origin: ' + origin));
-        }
-    },
-    credentials: true
-}));
-
+app.use(cors());
 app.use(express.json());
 
 // Routes
